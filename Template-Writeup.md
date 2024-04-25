@@ -163,3 +163,5 @@ Se quiser ver qual foi a senha que o programa estava esperando, podemos imprimi-
 
 O desafio envolveu análise estática de código, juntamente usei o paradigma de força-bruta para quebrar a senha, dada uma "wordlist" para iterar sobre... pode não ser a solução mais elegante, mas é uma solução bem simples.
 
+### Desafio 3 - money-ware
+![](_resources/money-ware/desafio.png)
