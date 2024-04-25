@@ -15,8 +15,6 @@ Informações sensiveis não devem ser inseridas em locais "estáticos" (histori
 
 Descrição do desafio 1 - Time Machine
 
-steps necessary to solve
-
 Para resolver a Time Machine, é fundamental ter conhecimento em ferramentas de versionamento como o Git, pois é pelo histórico de commits que vamos focar a resolução deste desafio, também será necessário ter um dominio básico em comandos do Linux. 
 
 Para começar, precisamos baixar o arquivo .zip que está sendo mencionado na descrição do desafio, podemos fazer isso usando a webshell do próprio picoCTF com o comando `wget` e a URL de download dos arquivos, desta forma apresentada abaixo. (Detalhe: estou usando Windows para visualizar o desafio, mas a resolução será contemplada em um ambiente Linux)
