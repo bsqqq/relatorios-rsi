@@ -26,6 +26,7 @@ Faça o login na webshell usando as mesmas credenciais de login do picoCTF:
 ![](_resources/Time_Machine/login1.png)
 
 Digite as credenciais nos respectivos campos solicitados
+
 ![](_resources/Time_Machine/login2.png)
 
 E você estará liberado a usar a webshell! Em seguida, vamos usar o comando mencionado anteriormente para baixar o arquivo .zip da descrição do desafio, mas antes, por questões de organização, vamos criar uma pasta para este problema para não misturar os arquivos de outros desafios, isso é uma boa pratica para se fazer. Fazemos `mkdir <nome_da_pasta>` para criar a pasta e depois `cd <nome_da_pasta>` para ir para dentro da pasta... (aqui usei `ls` para mostrar o antes e depois de criar a pasta).
