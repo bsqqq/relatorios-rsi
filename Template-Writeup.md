@@ -13,7 +13,7 @@ Informações sensiveis não devem ser inseridas em locais "estáticos" (histori
 ### Desafio 1 - Time Machine
 ![08232babb70d578bcc0ff6bb4ecbee53.png](_resources/Time_Machine/image.png)
 
-Descrição do desafio 1 - Time Machine
+- _Descrição do desafio 1 - Time Machine_
 
 Para resolver a Time Machine, é fundamental ter conhecimento em ferramentas de versionamento como o Git, pois é pelo histórico de commits que vamos focar a resolução deste desafio, também será necessário ter um dominio básico em comandos do Linux. 
 
@@ -21,32 +21,49 @@ Para começar, precisamos baixar o arquivo .zip que está sendo mencionado na de
 
 ![](_resources/Time_Machine/baixando1.png)
 
+- _Obtendo link de download do arquivo zipado_
+
 Faça o login na webshell usando as mesmas credenciais de login do picoCTF:
 ![](_resources/Time_Machine/login1.png)
+
+- _Localizando onde acessar a webshell do picoCTF_
 
 Digite as credenciais nos respectivos campos solicitados
 
 ![](_resources/Time_Machine/login2.png)
 
+- _Entrando com dados de login e senha para usar a webshell do picoCTF_
+
 E você estará liberado a usar a webshell! Em seguida, vamos usar o comando mencionado anteriormente para baixar o arquivo .zip da descrição do desafio, mas antes, por questões de organização, vamos criar uma pasta para este problema para não misturar os arquivos de outros desafios, isso é uma boa pratica para se fazer. Fazemos `mkdir <nome_da_pasta>` para criar a pasta e depois `cd <nome_da_pasta>` para ir para dentro da pasta... (aqui usei `ls` para mostrar o antes e depois de criar a pasta).
 
 ![](_resources/Time_Machine/preconfig.png)
+
+- _pré-configurando ambiente para a execução deste desafio_
 
 Agora vamos finalmente baixar o arquivo usando o comando `wget` e o link de download do arquivo logo em seguida.
 
 ![](_resources/Time_Machine/baixando2.png)
 
+- _fazendo download do arquivo_
+
 Rodando o comando `ls` para ver se o arquivo .zip consta no nosso diretório atual...
 
 ![](_resources/Time_Machine/listando.png)
+
+
+- _listando arquivos presentes no diretório_
 
 O próximo passo é descompactar o arquivo, pois como ele vem na extensão .zip não podemos trabalhar diretamente com ele desta forma. Para isso vamos rodar o comando `unzip challenge.zip`
 
 ![](_resources/Time_Machine/unzip.png)
 
+- _Logs do processo de descompactação do arquivo zipado_
+
 Verá que o retorno deste comando é um monte de logs mostrando os arquivos e pastas que foram criados e extraidos, fazendo um `ls` novamente veremos que depois desta operação de descompactação, foi criado uma nova pasta chamada `drop-in`, vamos entrar nessa pasta usando o comando `cd drop-in` e vamos olhar o que tem dentro usando `ls`...
 
 ![](/_resources/Time_Machine/posunzip.png)
+
+- _Depois da descompactação do arquivo zipado_
 
 Algo não parece fazer muito sentido a primeira vista, vimos um log cheio de arquivos criados e extraidos, mas quando damos `ls` estamos apenas vendo um único arquivo chamado `message.txt`... 
 
@@ -60,6 +77,8 @@ Ao rodar um dos dois comando citados acima, obtemos um histórico de modificaç�
 
 ![](_resources/Time_Machine/flag.png)
 
+- _flag do desafio 1_
+
 Conseguimos a flag para o desafio Time Machine! Em geral um desafio bem fácil e simples. O desafio nos ensinou a olhar por lugares onde normalmente não olhariamos normalmente, isso é um reforço para a prática de reconhecimento do alvo, e não só pra nos ensinar comando novos.
 
 ### Desafio 2 - PW Crack 5
@@ -71,6 +90,8 @@ Para resolver o desafio PW Crack 5, precisamos primeiro baixar todos os arquivos
 Para não perder o costume, vamos criar uma pasta para este desafio e colocar todos os arquivos necessários lá dentro, usando o comando `mkdir <nome_da_pasta>` e `cd <nome_da_pasta>` para criar e navegar para dentro da pasta... no meu caso o nome da pasta vai ser "PW_Crack_5".
 
 ![](_resources/PW_Crack_5/config.png)
+
+- _Organizando ambiente para o desafio 2_
 
 Neste desafio, vou usar meu próprio ambiente sem usar a webshell do picoCTF, por conta de que se trata de um código em python, e na minha experiência editando este código usando o editor de texto do próprio webshell tive problemas com a identação inconsistente, então resolvi fazer no Visual Studio Code da minha maquina pessoal, mas fique a vontade para fazer como achar melhor, um editor de texto não deve ser um impecilio para seguir a rigor este passo a passo.
 
@@ -84,6 +105,8 @@ Após isto, vou aproveitar e baixar os arquivos necessários usando a interface 
 Vamos executar o programa para ver o seu comportamento de forma dinâmica com o comando `python level5.py` na linha de comando
 
 ![](_resources/PW_Crack_5/rodando.png)
+
+- _Executando o desafio pela primeira vez_
 
 Após rodar o comando citado, o programa imprime um texto pedindo para inserir a senha para a flag, em seguida entro com qualquer input só para ver o que mostra depois.
 
@@ -157,14 +180,19 @@ Desta forma, o programa não nos perguntará mais por uma entrada de senha e aut
 
 ![](_resources/PW_Crack_5/flag.png)
 
+- _flag do desafio 2_
+
 Se quiser ver qual foi a senha que o programa estava esperando, podemos imprimi-la usando esse comando dentro da identação da verificação (marcado com seleção):
 
 ![](_resources/PW_Crack_5/senha.png)
+- _Bônus: como visualizar qual senha foi quebrada_
 
 O desafio envolveu análise estática de código, juntamente usei o paradigma de força-bruta para quebrar a senha, dada uma "wordlist" para iterar sobre... pode não ser a solução mais elegante, mas é uma solução bem simples.
 
 ### Desafio 3 - money-ware
 ![](_resources/money-ware/desafio.png)
+
+- _Descrição do desafio 3 - money-ware_
 
 Para resolvermos o desafio money-ware, vamos copiar a identificação da carteira de criptomoedas que está em texto colorido na descrição do problema. Para nos ajudar com este desafio, existe banco de dados online que podemos pesquisar o uso abusivo de carteiras usadas para fins maliciosos, como é no caso da descrição deste problema.
 
@@ -172,17 +200,25 @@ Após copiar a carteira que foi descrita no problema, vamos pesquisar no Google 
 
 ![](/_resources/money-ware/pesquisa.png)
 
+- _Resultado da busca no Google sobre "online bitcoin abuse databases"_
+
 O primeiro link parece ser o que estamos buscando... vamos acessar...
 
 ![](/_resources/money-ware/bitcoinabuse.png)
 
-Aparentemente o dominio que tentamos acessar se juntou com outro domínio, estranho não ter aparecido na busca anterior, mas tudo bem... vamos acessar este link.
+- _Dominio bitcoin abuse (bitcoinabuse.com)_
+
+Aparentemente o dominio que tentamos acessar se juntou com outro domínio... vamos acessar este link.
 
 ![](/_resources/money-ware/chainabuse.png)
+
+- _Dominio chain abuse (chainabuse.com)_
 
 Na parte superior da pagina no cabeçalho, podemos ver um campo de entrada para colocar a carteira que copiamos na descrição deste desafio... vamos colar aqui neste campo e fazer uma busca
 
 ![](/_resources/money-ware/busca.png)
+
+- _Retorno da pesquisa feita em cima da carteira_
 
 Quando vamos ver os resultados, devemos ter um certo cuidado aqui, pois podemos ser induzidos ao erro aqui e colocar a chave errada na submissão. Existe um tipo de malware conhecido como Ransomware, que como o nome sugere, "sequestra" o computador da vítima, encriptando os arquivos da pessoa, deixando apenas o necessário para que a vítima faça o pagamento em criptomoedas para a carteira que geralmente é provida pelo cyber-criminoso.
 
@@ -191,7 +227,80 @@ Contudo, apesar de que na descrição do problema pedir o nome do malware com a 
 Olhando o registro mais antigo que consta nessa plataforma, podemos encontrar algo que é um forte candidato a ser o que estamos procurando...
 
 ![](/_resources/money-ware/petya.png)
+- _Nome do Ransomware em destaque_
 
 A parte grifada no print acima é o nome de um Ransomware famoso que já fez vários computadores reféns ao longo dos ultimos anos e que ainda faz reféns até hoje, se o alvo em potencial não usar antivírus atualizados e/ou faz downloads da internet de precedẽncia duvidosa.
 
 Agora, temos um nome para colocar na flag, então fazendo como descrito na descrição do desafio, vamos colocar _`Petya`_ no campo esperado, fazendo no final a flag `picoCTF{Petya}` e pronto! Resolvido o desafio money-ware.
+
+Este desafio nos ajuda a aprimorar habilidades investigativas por meio de uso de ferramentas livres e fontes abertas ao público
+
+
+### Desafio 4 - strings it
+
+![](/_resources/strings%20it/desafio.png)
+
+- _Descrição do desafio 4 - strings it_
+
+Para resolver o desafio strings it, vamos baixar o arquivo disponibiizado na descrição deste problema, para tanto, vou utilizar o webshell do picoCTF para não precisar baixar localmente... 
+
+Usando comandos que já vimos anteriormente neste documento, iremos criar uma pasta, navegar para a pasta criada e por fim baixar o arquivo.
+
+![](/_resources/strings%20it/link_download.png)
+
+- _Obtendo o link de download do arquivo_
+
+Como já mencionei aqui e anteriormente em outros desafios, vamos fazer a organização para começar o desafio...
+
+Supondo que já saiba criar, acessar pastas e baixar arquivos pelo terminal, adiantarei os próximos passos.
+
+![](/_resources/strings%20it/arquivo.png)
+
+- _Pasta criada e arquivo baixado_
+
+Este desafio diz para encontrar a flag sem rodar o arquivo, pois bem, isso é possível graças a dois comandos que podemos utilizar para imprimir todas as strings (cadeias de caractéres) deste programa e filtrar pelo prefixo da flag (picoCTF)
+
+Para isso, vamos rodar o programa que tem o mesmo nome do arquivo, `strings`, então o comando fica `$ strings strings`.
+
+Fazendo isso, teremos o retorno de uma lista enorme de strings presentes neste binário, fica muito complexo de procurar a flag no meio de tanta string, então por isso devemos usar um segundo comando, que neste caso irei usar o `grep`, que serve para encontrar padroes especificados no parametro dele para filtrar essa lista de strings...
+
+Mas antes de usar o `grep`, irei tentar demonstrar a quantidade de strings presentes neste binário usando este comando `strings strings | wc -l` , este comando vai retornar a quantidade de linhas presentes quando executamos `strings strings` através do pipe ( símbolo "|" ), o que este operador faz é pegar o resultado do comando antes do pipe e passar como parâmetro para o segundo comando depois do pipe, ou seja... a enorme lista que será imprimida na primeira parte (antes do pipe), será usada para contar quantas linhas tem com o comando `wc -l`
+
+![](/_resources/strings%20it/quantidade.png)
+
+- _Quantidade de linhas contadas pelo comando dado_
+
+Para tanto, o parâmetro `-l` do `wc` serve para contar a quantidade de caracteres de nova linha encontrados no parâmetro dado, "enviado" pelo primeiro comando.
+
+Se quisesse, poderia tentar jogar o output do comando `strings strings` para dentro de um arquivo de texto usando o seguinte comando `strings strings > lista_de_strings.txt`, mas se olhasse de forma "manual" atrás da string, ainda assim iria gastar muito tempo procurando, a não ser que use os métodos de pesquisa de palavras embutidas nos editores de texto.
+
+Mas como havia mencionado, o `grep` vai nos ajudar nesse desafio e não iremos precisar fazer mais nenhum outro passo intermediário para obter a flag... logo, o comando que vamos fazer é `$ strings strings | grep picoCTF` e já devemos ver diretamente a flag imprimida na tela.
+
+![](/_resources/strings%20it/flag.png)
+
+- _flag do desafio 4_
+
+Este desafio foi em geral bem simples, mas nos agregou um bom conhecimento e formas de pensar diferentes para chegar na solução, além de um pouco mais de conhecimento em binários.
+
+
+### Desafio 5 - Bases
+
+![](/_resources/Bases/desafio.png)
+
+- _Descrição do desafio 5 - Bases_
+
+Para resolver o desafio 5, podemos pegar uma pista pelo nome do desafio para saber do que se trata... então, a descrição do problema pergunta o que aquele texto colorido significa, tem algo haver com "bases".
+
+Uma das cifras mais conhecidas que usa "bases" é a base64, uma cifra que não deve ser usada para proteger informações sensiveis por sinal... pois se trata de ser uma cifra facilmente reversível! 
+
+Existem soluções online de decriptação de textos em base64 que podem ser achados facilmente em qualquer motor de busca, vamos testar pra ter certeza que se trata de uma cifra em base64.
+
+![](/_resources/Bases/conversao-preflag.png)
+
+- _Texto decodificado_
+
+Após a decodificação do texto especificado na descrição do problema, temos este texto de volta `l3arn_th3_r0p35`, que deve ser o que fica dentro das chaves da flag `picoCTF{l3arn_th3_r0p35}`.
+
+Após submeter esta flag, conseguimos concluir o desafio!
+
+O desafio nos proporcionou um conhecimento em escolher a criptografia forte e reconhecer quando se trata de cifras altamente conhecidas, então devemos ter cuidado com o tipo de informação que queremos proteger com cifras facilmente reversíveis "computacionalmente" falando.
