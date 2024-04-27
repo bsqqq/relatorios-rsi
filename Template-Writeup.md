@@ -165,3 +165,33 @@ O desafio envolveu análise estática de código, juntamente usei o paradigma de
 
 ### Desafio 3 - money-ware
 ![](_resources/money-ware/desafio.png)
+
+Para resolvermos o desafio money-ware, vamos copiar a identificação da carteira de criptomoedas que está em texto colorido na descrição do problema. Para nos ajudar com este desafio, existe banco de dados online que podemos pesquisar o uso abusivo de carteiras usadas para fins maliciosos, como é no caso da descrição deste problema.
+
+Após copiar a carteira que foi descrita no problema, vamos pesquisar no Google ou em qualquer outro motor de busca de sua preferência por "online bitcoin abuse databases"
+
+![](/_resources/money-ware/pesquisa.png)
+
+O primeiro link parece ser o que estamos buscando... vamos acessar...
+
+![](/_resources/money-ware/bitcoinabuse.png)
+
+Aparentemente o dominio que tentamos acessar se juntou com outro domínio, estranho não ter aparecido na busca anterior, mas tudo bem... vamos acessar este link.
+
+![](/_resources/money-ware/chainabuse.png)
+
+Na parte superior da pagina no cabeçalho, podemos ver um campo de entrada para colocar a carteira que copiamos na descrição deste desafio... vamos colar aqui neste campo e fazer uma busca
+
+![](/_resources/money-ware/busca.png)
+
+Quando vamos ver os resultados, devemos ter um certo cuidado aqui, pois podemos ser induzidos ao erro aqui e colocar a chave errada na submissão. Existe um tipo de malware conhecido como Ransomware, que como o nome sugere, "sequestra" o computador da vítima, encriptando os arquivos da pessoa, deixando apenas o necessário para que a vítima faça o pagamento em criptomoedas para a carteira que geralmente é provida pelo cyber-criminoso.
+
+Contudo, apesar de que na descrição do problema pedir o nome do malware com a primeira letra maiúscula e o resto minúsculo, "Ransomware" não é exatamente o que estamos buscando, mas estamos no caminho certo! vamos continuar olhando os registros feitos em cima desta carteira...
+
+Olhando o registro mais antigo que consta nessa plataforma, podemos encontrar algo que é um forte candidato a ser o que estamos procurando...
+
+![](/_resources/money-ware/petya.png)
+
+A parte grifada no print acima é o nome de um Ransomware famoso que já fez vários computadores reféns ao longo dos ultimos anos e que ainda faz reféns até hoje, se o alvo em potencial não usar antivírus atualizados e/ou faz downloads da internet de precedẽncia duvidosa.
+
+Agora, temos um nome para colocar na flag, então fazendo como descrito na descrição do desafio, vamos colocar _`Petya`_ no campo esperado, fazendo no final a flag `picoCTF{Petya}` e pronto! Resolvido o desafio money-ware.
